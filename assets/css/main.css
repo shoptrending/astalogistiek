@@ -1859,7 +1859,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #0b2a4a;
 		}
 
 	select {
@@ -1956,7 +1956,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #0b2a4a;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2817,7 +2817,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #0b2a4a;
 			color: #c8ece9;
 		}
 
@@ -2871,7 +2871,7 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: #0b2a4a;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
@@ -2887,7 +2887,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #0b2a4a;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -3139,8 +3139,11 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
-			background-color: transparent;
+			background-color: rgba(0, 0, 0, 0.4); /* translucent dark overlay */
+			backdrop-filter: blur(8px); /* the magic blur */
+			-webkit-backdrop-filter: blur(8px); /* for Safari */
 		}
+
 
 		.wrapper.style5 {
 			background-color: #ffffff;
@@ -3351,7 +3354,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #0b2a4a;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
