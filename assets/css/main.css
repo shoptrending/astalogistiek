@@ -3988,14 +3988,28 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		position: relative;
+		overflow: hidden; /* ensure pseudo stays contained */
+	}
+
+	body.is-mobile.landing .wrapper.style4::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-image: linear-gradient(
+			to bottom,
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+			),
+			url("../../images/banner.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		filter: blur(6px); /* adjust the blur amount */
+		transform: scale(1.05); /* prevents edge clipping */
+		z-index: -1;
 	}
+
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
